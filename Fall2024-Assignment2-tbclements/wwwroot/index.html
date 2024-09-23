@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Twoogle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/sunny/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js" integrity="sha384-8EM386r8XMMzwGPUxfGNr6c1wIOYnPQBJ6VFxzKCZeklpQarHoZGB40kdNDA3gYr" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload the images in cache, easy way to avoid freezing on click to change page -->
+    <link id="img1" as="image" rel="preload" href="https://images.unsplash.com/photo-1727013031787-858020654797?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <link id="img2" as="image" rel="preload" href="https://images.unsplash.com/photo-1726742942147-1f87c0a19d0b?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    
+</head>
+
+<body class="backgroundPic">
+    <div id="backgroundPic">
+        <div id="headerBar">
+            <h1 class="ui-widget">Twoogle</h1>
+            <p><i>So Good its like the second version of <s>Google</s> Unnamed Competator</i></p>
+        </div>
+
+        <input type="text" id="query" class="ui-widget"></textarea>
+        
+        <div id="bodyBar">
+            
+            <div id="buttonBar">
+                <button id="searchButton" class="ui-button ui-widget ui-corner-all">Search</button>
+
+                <button id="timeButton" class="ui-button ui-widget ui-corner-all">Time</button>
+
+                <button class="ui-button ui-corner-all ui-widget"> I'm Feeling Lucky </button>
+            </div>
+
+        </div>
+        <div id="searchResults" title="Search Results" class="ui-widget"></div>
+        <div id="time" title="Current Time" class="ui-widget"></div>
+
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>

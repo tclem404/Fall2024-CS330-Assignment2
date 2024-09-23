@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+#backgroundPic {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-image: url(https://images.unsplash.com/photo-1726742942147-1f87c0a19d0b?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    transition: ease 1000ms linear;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+input {
+    text-align: center;
+}
+
+#query{
+    width: 70vw;
+    height: 5vh;
+    padding: 5px 5vw;
+    border-radius: 100vh;
+}
+
+#headerBar {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 10vh;
+}
+
+#bodyBar{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100px;
+    flex-grow: 5;
+}
+
+#buttonBar {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+}
