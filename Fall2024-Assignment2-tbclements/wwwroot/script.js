@@ -15,13 +15,13 @@ function apiSearch() {
     })
         .done(function (data) {
             var len = data.webPages.value.length;
-            var results = '';
+            var results = `Showing ${len} results<br>`;
             for (i = 0; i < len; i++) {
-                results += `<p><a href="${data.webPages.value[i].url}">${data.webPages.value[i].name}</a>: ${data.webPages.value[i].snippet}</p>`;
+                results += `<p class="searchResultEntry"><a class="link" href="${data.webPages.value[i].url}">${data.webPages.value[i].name}</a>: ${data.webPages.value[i].snippet}</p>`;
             }
 
             $('#searchResults').html(results);
-            $('#searchResults').dialog();
+            
         })
         .fail(function () {
             alert('error');
@@ -35,7 +35,7 @@ window.addEventListener("click", async () => {
         $('#backgroundPic').css('background-image', 'url(https://images.unsplash.com/photo-1727013031787-858020654797?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     }else{
         currImg = 0;
-        $('#backgroundPic').css('background-image','url(https://images.unsplash.com/photo-1726855500757-658894d298eb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
+        $('#backgroundPic').css('background-image','url(https://images.unsplash.com/photo-1727452165826-920ea81d89e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)')
     }
 })
 
@@ -48,7 +48,9 @@ function setTimeDia() {
     let hours = (curr.getHours() < 10 ? '0' + curr.getHours() : '' + curr.getHours())
     let mins = (curr.getMinutes() < 10 ? '0' + curr.getMinutes() : '' + curr.getMinutes())
     $('#time').html(hours + ':' + mins);
-    $('#time').dialog();
+    $('#time').dialog({
+        position: {my: 'top', at: 'bottom', of: '#timeButton'}
+    });
 }
 
 document.getElementById('timeButton').onclick = (() => {
@@ -98,7 +100,6 @@ function colorName(){
     for(var i = 0; i < nameOfEngine.length; i++){
         modified += `<text style="color:${colors[i]};font-size: xxx-large;">${nameOfEngine[i]}`;
     }
-    alert(modified);
 
     $('#logo').html(modified);
 

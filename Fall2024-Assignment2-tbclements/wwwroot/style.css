@@ -6,7 +6,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-position: center;
-    background-image: url(https://images.unsplash.com/photo-1726855500757-658894d298eb?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://images.unsplash.com/photo-1727452165826-920ea81d89e8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     display: flex;
     flex: auto;
     flex-direction: column;
@@ -60,4 +60,38 @@ input {
     align-items: start;
     width: 100%;
     justify-content: space-around;
+}
+
+.searchResultEntry{
+    color: white;
+}
+
+.link{
+    color: lightblue;
+}
+
+.link:hover{
+    color: rgb(188, 173, 230);
+}
+
+#searchResults{
+    height: '200';
+    width: 80vw;
+    color:white;
+    overflow-y: overlay;
+    margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0);
+    width: 8px;
+}
+::-webkit-scrollbar-track-piece{
+    border-radius: 100px;
+    background: rgba(100, 100, 100, 0.5);
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.5);
 }
