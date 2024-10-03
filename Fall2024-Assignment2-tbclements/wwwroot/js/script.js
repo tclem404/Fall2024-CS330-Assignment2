@@ -29,6 +29,8 @@ function apiSearch() {
 }
 
 let currImg = 0
+
+// pulling the image SHOULD freeze the page yet if you cache the images (as I did by preloading in the HTML) it does't :)
 window.addEventListener("click", async () => {
     if(currImg == 0){
         currImg = 1;
